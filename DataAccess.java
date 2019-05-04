@@ -7,13 +7,7 @@ public class DataAccess {
 	private String connectionString;
 	private String user;
 	private String password;
-	
-	public DataAccess(String connectionString, String user, String password) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		this.connectionString = connectionString;
-		this.user = user;
-		this.password = password;
-		
-	}
+
 	
 	private Connection GetConnection() throws SQLException
 	{
@@ -171,6 +165,13 @@ public class DataAccess {
 		}//end try
 
 	}
+    public void mrPisulka(int cm){
+        if(cm > 15)
+            System.out.println("Your pisulka is normal")
+        else 
+            System.out.println("Your pisulka is small")
+
+    }
 	
 	public void DeleteMovie(int id) throws SQLException
 	{
